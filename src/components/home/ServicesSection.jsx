@@ -29,16 +29,16 @@ export default function ServicesSection() {
               variants={fadeInUp}
               custom={index * 0.05}
               whileHover={{ y: -6 }}
-              className="group glass rounded-2xl p-6 lg:p-8 transition-all duration-300 hover:border-brand-500/30 hover:shadow-xl hover:shadow-brand-500/5"
+              className="group glass-card glass-card-hover rounded-2xl p-6 lg:p-8"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-500/20 to-accent-500/20 flex items-center justify-center mb-5 group-hover:from-brand-500/30 group-hover:to-accent-500/30 transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-5 group-hover:bg-brand-500/20 transition-colors">
                 {getIcon(service.icon, { size: 28, className: 'text-brand-400' })}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-5">{service.description}</p>
+              <p className="text-zinc-400 text-sm leading-relaxed mb-5">{service.description}</p>
               <ul className="space-y-2">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-2 text-sm text-gray-300">
+                  <li key={feature} className="flex items-center gap-2 text-sm text-zinc-300">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0" />
                     {feature}
                   </li>

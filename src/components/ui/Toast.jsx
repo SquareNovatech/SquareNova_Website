@@ -14,12 +14,12 @@ export default function Toast({ toast, onDismiss }) {
           aria-live="polite"
           className={`fixed bottom-6 right-6 z-[100] max-w-sm w-[calc(100%-3rem)] flex items-start gap-3 p-4 rounded-xl shadow-2xl border backdrop-blur-xl ${
             toast.type === 'success'
-              ? 'bg-brand-500/15 border-brand-500/30 shadow-brand-500/10'
+              ? 'bg-white/10 border-white/20 shadow-white/5'
               : 'bg-red-500/15 border-red-500/30 shadow-red-500/10'
           }`}
         >
           {toast.type === 'success' ? (
-            <CheckCircle2 className="text-brand-400 shrink-0 mt-0.5" size={22} />
+            <CheckCircle2 className="text-white shrink-0 mt-0.5" size={22} />
           ) : (
             <XCircle className="text-red-400 shrink-0 mt-0.5" size={22} />
           )}

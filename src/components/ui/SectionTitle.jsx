@@ -24,11 +24,12 @@ export default function SectionTitle({
           {badge}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
         {title}
       </h2>
+      {align === 'center' && <div className="glow-line max-w-xs mx-auto mb-4" />}
       {subtitle && (
-        <p className="text-lg text-gray-400 leading-relaxed">{subtitle}</p>
+        <p className="text-lg text-zinc-400 leading-relaxed">{subtitle}</p>
       )}
     </motion.div>
   );
