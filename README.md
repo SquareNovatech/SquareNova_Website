@@ -28,7 +28,7 @@ npm run preview
 
 ## Pages
 
-| Route | Description |
+| Route | Descriptions |
 |-------|-------------|
 | `/` | Home — Hero, About, Services, Technologies, Industries, Why Us, Contact |
 | `/about` | Company overview, mission, vision, values |
