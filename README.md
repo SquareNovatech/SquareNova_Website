@@ -1,4 +1,4 @@
-# Square Nova TECH — Company Website
+# Square Nova TECH — Company Website 
 
 Modern, premium corporate website for **Square Nova TECH Private Limited**.
 
