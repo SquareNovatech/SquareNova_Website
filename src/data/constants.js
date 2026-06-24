@@ -23,6 +23,7 @@ export const NAV_LINKS = [
 export const LEGAL_LINKS = [
   { label: 'Privacy Policy', path: '/privacy-policy' },
   { label: 'Terms & Conditions', path: '/terms-and-conditions' },
+  { label: 'Account Deletion', path: '/account-deletion' },
 ];
 
 export const APP = {
