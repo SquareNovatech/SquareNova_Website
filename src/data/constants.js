@@ -20,6 +20,16 @@ export const NAV_LINKS = [
   { label: 'Contact', path: '/contact' },
 ];
 
+export const LEGAL_LINKS = [
+  { label: 'Privacy Policy', path: '/privacy-policy' },
+  { label: 'Terms & Conditions', path: '/terms-and-conditions' },
+];
+
+export const APP = {
+  name: 'Emaan Wallpapers',
+  supportEmail: 'support@squarenovatech.com',
+};
+
 export const SERVICES = [
   {
     id: 'android',

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail, Globe, Share2, ArrowUpRight } from 'lucide-react';
-import { COMPANY, NAV_LINKS, SERVICES } from '../../data/constants';
+import { COMPANY, LEGAL_LINKS, NAV_LINKS, SERVICES } from '../../data/constants';
 import Logo from '../ui/Logo';
 
 export default function Footer() {
@@ -62,14 +62,16 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/privacy-policy"
-                  className="text-sm text-zinc-400 hover:text-white transition-colors"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
+              {LEGAL_LINKS.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="text-sm text-zinc-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -115,9 +117,11 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
           <p>&copy; {currentYear} {COMPANY.legalName}. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/privacy-policy" className="hover:text-zinc-300 transition-colors">
-              Privacy Policy
-            </Link>
+            {LEGAL_LINKS.map((link) => (
+              <Link key={link.path} to={link.path} className="hover:text-zinc-300 transition-colors">
+                {link.label}
+              </Link>
+            ))}
             <Link to="/contact" className="hover:text-zinc-300 transition-colors">
               Contact
             </Link>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { fadeInUp } from '../../utils/animations';
 import AnimatedBackground from './AnimatedBackground';
 
-export default function PageHero({ badge, title, subtitle }) {
+export default function PageHero({ badge, title, subtitle, lastUpdated }) {
   return (
     <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
       <AnimatedBackground />
@@ -27,6 +27,17 @@ export default function PageHero({ badge, title, subtitle }) {
         >
           {title}
         </motion.h1>
+        {lastUpdated && (
+          <motion.p
+            initial="hidden"
+            animate="visible"
+            custom={0.15}
+            variants={fadeInUp}
+            className="text-sm text-zinc-500 mb-4"
+          >
+            Last Updated: {lastUpdated}
+          </motion.p>
+        )}
         {subtitle && (
           <motion.p
             initial="hidden"
